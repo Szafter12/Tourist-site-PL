@@ -1,0 +1,60 @@
+@keyframes square-rotate {
+	from {
+		rotate: 0deg;
+	}
+	to {
+		rotate: 360deg;
+	}
+}
+
+@keyframes square-rotate-left {
+	from {
+		rotate: 0deg;
+	}
+	to {
+		rotate: -360deg;
+	}
+}
+
+@keyframes pulse {
+	from {
+		scale: 1;
+		opacity: 1;
+	}
+	to {
+		scale: 1.4;
+		opacity: 0;
+	}
+}
+
+@keyframes arrow {
+	from {
+		transform: translateY(-5px);
+	}
+	to {
+		transform: translateY(5px);
+	}
+}
+
+@keyframes animation-stroke {
+	0% {
+		fill: transparent;
+		stroke: #fff;
+		stroke-width: 3;
+		stroke-dashoffset: 25%;
+		stroke-dasharray: 0 32%;
+	}
+	50% {
+		fill: transparent;
+		stroke: #fff;
+		stroke-width: 3;
+	}
+	80%,
+	100% {
+		fill: #fff;
+		stroke: transparent;
+		stroke-width: 0;
+		stroke-dashoffset: -25%;
+		stroke-dasharray: 32% 0;
+	}
+}

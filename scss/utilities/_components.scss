@@ -1,0 +1,117 @@
+@use './colors' as *;
+@use './animations' as *;
+
+// fonts
+
+.kalnia-thin {
+	font-family: 'Kalnia', serif;
+	font-optical-sizing: auto;
+	font-weight: 100;
+	font-style: normal;
+	font-variation-settings: 'wdth' 100;
+}
+
+.kalnia-bold {
+	font-family: 'Kalnia', serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-variation-settings: 'wdth' 100;
+}
+
+// loading screen
+
+.loader-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	inset: 0;
+	z-index: 999;
+	background-color: $black-color;
+	display: grid;
+	place-content: center;
+	transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+
+	svg {
+		width: 100rem;
+		font-weight: bold;
+	}
+
+	svg text {
+		font-size: 10rem;
+		stroke-width: 2;
+		letter-spacing: -6px;
+	}
+
+	svg text.text-body {
+		stroke: #fff;
+		animation: animation-stroke 4s alternate infinite;
+	}
+}
+
+.hide {
+	opacity: 0;
+	visibility: hidden;
+}
+
+// section layout
+
+.wrapper {
+	max-width: 1400px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.section-padding {
+	padding: 5em 2em;
+}
+
+.section-title {
+	text-align: center;
+
+	.title {
+		position: relative;
+		font-size: clamp(2.8rem, 5vw, 3.8rem);
+		color: $pure-white;
+		text-align: center;
+		font-weight: 200;
+		letter-spacing: 1px;
+		text-transform: uppercase;
+
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			width: 30%;
+			height: 3px;
+			background-color: $main-color;
+		}
+	}
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+// addons
+.square {
+	position: absolute;
+	font-size: 15rem;
+	color: hsla(0, 0%, 100%, 0.1);
+
+	&-one {
+		top: 280px;
+		left: 80px;
+		animation: square-rotate 50s linear infinite;
+	}
+
+	&-two {
+		bottom: 100px;
+		right: 120px;
+		animation: square-rotate-left 50s linear infinite;
+	}
+}

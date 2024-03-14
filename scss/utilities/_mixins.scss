@@ -1,0 +1,18 @@
+@use './colors' as *;
+
+@mixin burgerBtn($top, $width) {
+	position: absolute;
+	top: $top;
+	right: 0;
+	width: $width;
+	height: 4px;
+	border-radius: 20px;
+	background-color: $main-color;
+	transition: width 0.3s;
+}
+
+@mixin circle {
+	border: 1px solid $pure-white;
+	border-radius: 50%;
+}
+
