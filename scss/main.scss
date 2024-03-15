@@ -130,11 +130,11 @@ body {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 130px;
-	height: 100svh;
+	height: 100vh;
 	background-image: url('../img/hero-big.jpg');
 	background-size: cover;
 	background-attachment: fixed;
-	background-position: center;
+	background-position: bottom;
 	z-index: 1;
 
 	&::before {
