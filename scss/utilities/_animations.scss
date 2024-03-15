@@ -27,15 +27,6 @@
 	}
 }
 
-@keyframes arrow {
-	from {
-		transform: translateY(-5px);
-	}
-	to {
-		transform: translateY(5px);
-	}
-}
-
 @keyframes animation-stroke {
 	0% {
 		fill: transparent;

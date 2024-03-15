@@ -9,6 +9,7 @@ body {
 	font-size: 1.6rem;
 	font-family: 'Inter', sans-serif;
 	background-color: $black-color;
+	color: $pure-white;
 }
 
 // navigation
@@ -19,6 +20,8 @@ body {
 		top: 0;
 		right: 20px;
 		padding: 0.5em;
+		border-bottom-left-radius: 12px;
+		border-bottom-right-radius: 12px;
 		background-color: $pure-white;
 		box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
 		z-index: 999;
@@ -35,13 +38,13 @@ body {
 			transform: translate(-50%, -50%);
 
 			&::before {
-				@include burgerBtn(12px, 100%);
 				content: '';
+				@include burgerBtn(12px, 100%);
 			}
 
 			&::after {
-				@include burgerBtn(24px, 100%);
 				content: '';
+				@include burgerBtn(24px, 100%);
 				transition-delay: 0.1s;
 			}
 		}
@@ -57,6 +60,7 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
+		gap: 2em;
 		transform: translateX(100%);
 		background-color: $main-color;
 		z-index: 100;
@@ -64,11 +68,10 @@ body {
 
 		&-link {
 			position: relative;
+			margin-left: 1em;
 			padding: 0.5em;
-			margin: 1em 0;
-			font-size: clamp(2rem, 3vw, 3.6rem);
+			font-size: clamp(2.8rem, 3vw, 4.8rem);
 			color: $pure-white;
-			font-weight: 600;
 			transform: translateX(500px);
 			opacity: 0;
 			transition: transform 0.5s, opacity 0.6s;
@@ -81,12 +84,6 @@ body {
 			}
 			&:nth-child(4) {
 				transition-delay: 0.3s;
-			}
-			&:nth-child(5) {
-				transition-delay: 0.4s;
-			}
-			&:nth-child(6) {
-				transition-delay: 0.5s;
 			}
 
 			&::before,
@@ -158,7 +155,6 @@ body {
 		flex-direction: column;
 		padding: 1em;
 		background-color: $main-color;
-		color: $pure-white;
 		font-size: clamp(2rem, 5vw, 4.4rem);
 		letter-spacing: 1px;
 	}
@@ -168,7 +164,7 @@ body {
 		justify-self: center;
 		align-self: center;
 		margin-top: 3em;
-		color: $pure-white;
+		padding: 0 1em;
 		text-align: left;
 		font-size: clamp(3rem, 5vw, 7.2rem);
 	}
@@ -194,11 +190,14 @@ body {
 
 			.arrow {
 				padding: 1.5em;
+				font-size: clamp(1.8rem, 5vw, 2.4rem);
 				color: $pure-white;
-				font-size: 2.4rem;
-				animation: arrow 0.8s linear alternate infinite;
 			}
 		}
+	}
+
+	&__socials {
+		display: none;
 	}
 }
 
@@ -211,10 +210,11 @@ body {
 		margin: 5em 0;
 
 		&__card {
+			position: relative;
 			min-height: 500px;
-			background-size: 1200px;
-			background-position: center;
 			border-radius: 12px;
+			background-size: 1100px;
+			background-position: center;
 			overflow: hidden;
 			transition: background-size 0.4s;
 
@@ -233,6 +233,27 @@ body {
 				.btn {
 					transform: translateX(0);
 				}
+				.offert__view {
+					opacity: 0;
+				}
+			}
+		}
+
+		&__view {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			padding: 2em;
+			width: 50%;
+			border-top-left-radius: 12px;
+			border-top-right-radius: 12px;
+			transform: translateX(-50%);
+			text-align: center;
+			background-color: rgba(0,0,0,0.7);
+			transition: opacity 0.3s;
+			
+			p {
+				letter-spacing: 1px;
 			}
 		}
 
@@ -244,7 +265,6 @@ body {
 			padding: 2em;
 			height: 100%;
 			background-image: linear-gradient(180deg, rgba(21, 22, 24, 0.24) 0%, #151618 100%);
-			color: $pure-white;
 			opacity: 0;
 			transition: opacity 0.4s;
 		}
@@ -313,7 +333,36 @@ body {
 @media (min-width: 400px) {
 	.nav {
 		&__items {
+			margin-left: 0;
 			align-items: center;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.header {
+		&__socials {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			display: flex;
+			flex-direction: column;
+			gap: 3em;
+			padding: 2em;
+			border-top-left-radius: 12px;
+			border-top-right-radius: 12px;
+			background-color: $main-color;
+
+			.brand-icon {
+				padding: 0.5em;
+				font-size: clamp(2rem, 3vw, 2.8rem);
+				color: $pure-white;
+				transition: color 0.3s;
+
+				&:hover {
+					color: $black-color;
+				}
+			}
 		}
 	}
 }
