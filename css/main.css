@@ -440,7 +440,8 @@ body {
   transition: opacity 0.3s;
 }
 .news .offert__view p {
-  letter-spacing: 1px;
+  margin: 0 auto;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
 }
 .news .offert__content {
   display: flex;
