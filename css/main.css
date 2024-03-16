@@ -136,7 +136,7 @@ table {
   animation: animation-stroke 4s alternate infinite;
 }
 
-.hide {
+.hide-loader {
   opacity: 0;
   visibility: hidden;
 }

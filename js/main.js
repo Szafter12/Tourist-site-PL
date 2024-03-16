@@ -17,7 +17,7 @@ const toggleNav = () => {
 }
 
 window.addEventListener('load', () => {
-	loaderContainer.classList.add('hide')
+	loaderContainer.classList.add('hide-loader')
 })
 
 burgerBtn.addEventListener('click', toggleNav)
