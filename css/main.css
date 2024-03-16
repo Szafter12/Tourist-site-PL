@@ -6,11 +6,6 @@
   padding: 0;
 }
 
-html,
-body {
-  height: 100svh;
-}
-
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
