@@ -329,7 +329,6 @@ body {
   height: 100vh;
   background-image: url("../img/hero-big.jpg");
   background-size: cover;
-  background-attachment: fixed;
   background-position: bottom;
   z-index: 1;
 }
@@ -518,12 +517,13 @@ body {
     display: flex;
     flex-direction: column;
     gap: 3em;
-    padding: 2em;
+    padding: 1.5em;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     background-color: hsl(44, 54%, 45%);
   }
   .header__socials .brand-icon {
+    position: relative;
     padding: 0.5em;
     font-size: clamp(2rem, 3vw, 2.8rem);
     color: hsl(0, 0%, 100%);
@@ -531,6 +531,23 @@ body {
   }
   .header__socials .brand-icon:hover {
     color: hsl(0, 0%, 13%);
+  }
+  .header__socials a {
+    position: relative;
+  }
+  .header__socials a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -100%;
+    height: 100%;
+    width: 2px;
+    background-color: hsl(0, 0%, 100%);
+    pointer-events: none;
+  }
+  .header__socials a:last-child::after {
+    display: none;
   }
 }
 @media (min-width: 768px) {
