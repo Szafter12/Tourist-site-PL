@@ -130,7 +130,7 @@ body {
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr 130px;
-	height: 100vh;
+	height: 100svh;
 	background-image: url('../img/hero-big.jpg');
 	background-size: cover;
 	background-position: bottom;
@@ -379,7 +379,7 @@ body {
 					background-color: $pure-white;
 					pointer-events: none;
 				}
-				
+
 				&:last-child::after {
 					display: none;
 				}
