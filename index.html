@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <div class="loader-container">
+    <!-- <div class="loader-container">
         <svg viewBox="0 0 800 300">
             <text x="50%" y="50%" dy="0" text-anchor="middle" class="text-body">
                 Spokojne &
@@ -29,7 +29,7 @@
                 Wakacje
             </text>
         </svg>
-    </div>
+    </div> -->
 
     <nav class="nav">
         <button class="nav__burgerBtn">
@@ -64,9 +64,11 @@
         </div>
 
         <div class="header__socials">
-            <a href="https://www.facebook.com/?locale=pl_PL" target="_blank"><i class="brand-icon fa-brands fa-square-facebook"></i></a>
+            <a href="https://www.facebook.com/?locale=pl_PL" target="_blank"><i
+                    class="brand-icon fa-brands fa-square-facebook"></i></a>
             <a href="https://www.instagram.com/" target="_blank"><i class="brand-icon fa-brands fa-instagram"></i></a>
-            <a href="https://twitter.com/home?lang=pl" target="_blank"><i class=" brand-icon fa-brands fa-x-twitter"></i></a>
+            <a href="https://twitter.com/home?lang=pl" target="_blank"><i
+                    class=" brand-icon fa-brands fa-x-twitter"></i></a>
         </div>
     </header>
 
@@ -215,8 +217,68 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+        </div>
+    </section>
+
+    <section id="company">
+        <h2 class="section-title">
+            <span class="title">O firmie</span>
+        </h2>
+        <div class="wrapper">
+
+            <div class="about-us">
+                <div class="about-us__box">
+                    <img class="about-us__img" src="./img/company1.jpg"
+                        alt="three people on the beach smilinig to the camera">
+                    <p class="about-us__info">
+                        Jesteśmy pasjonatami podróży, którzy wierzą, że każdy
+                        zasługuje na chwilę odpoczynku i relaksu w otoczeniu
+                        pięknych miejsc. Naszą misją jest tworzenie
+                        niezapomnianych wypraw, które pozostawią w sercach
+                        naszych klientów wyjątkowe wspomnienia na całe życie.
+                        <br><br>
+                        Od lat specjalizujemy się w organizacji spersonalizowanych wakacji, dbając o każdy detal, aby
+                        Twoje doświadczenie podróżowania było wyjątkowe i pozbawione stresu. Nasz zespół składa się z
+                        doświadczonych doradców podróży, którzy chętnie podzielą się swoją wiedzą i pasją, pomagając Ci
+                        stworzyć idealny plan podróży dopasowany do Twoich potrzeb i preferencji.
+                    </p>
+                </div>
+                <div class="about-us__box about-us__box--reverse">
+                    <img class="about-us__img" src="./img/company2.jpg" alt="our office">
+                    <p class="about-us__info">
+                        Jako biuro podróży dbające o środowisko, podejmujemy działania mające na celu minimalizację
+                        naszego wpływu na planetę, promując odpowiedzialny turystykę i wspierając lokalne społeczności
+                        oraz środowisko naturalne.
+                        <br><br>
+                        Niezależnie od tego, czy marzysz o leniwym wypoczynku na białych piaskach tropikalnej wyspy,
+                        odkrywaniu tajemniczych zakątków egzotycznych kultur, czy też aktywnym spędzeniu czasu w górach
+                        lub nad morzem, "Spokojne Wakacje" są gotowe uczynić Twoje marzenia podróżnicze rzeczywistością.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">
+            <span class="title">Kontakt</span>
+        </h2>
+        <div class="wrapper">
+            <form class="contact__form">
+                <div class="contact__container">
+                    <input class="contact__input" type="text" name="name">
+                    <label class="contact__label" for="name">Imie</label>
+                </div>
+                <div class="contact__container">
+                    <input class="contact__input" type="email" name="email">
+                    <label class="contact__label" for="email">E-mail</label>
+                </div>
+                <div class="contact__container">
+                    <textarea class="contact__textarea" name="msg"></textarea>
+                    <label class="contact__label" for="msg">Wiadomość</label>
+                </div>
+            </form>
         </div>
     </section>
 
