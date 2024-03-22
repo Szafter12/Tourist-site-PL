@@ -62,7 +62,27 @@
 	max-width: 1400px;
 	width: 100%;
 	margin: 0 auto;
-	padding: 3em 1em ;
+	padding: 3em 1em;
+}
+
+.box {
+	position: absolute;
+	top: 0;
+	right: -20%;
+	width: 60%;
+	height: 50px;
+	transform: skew(45deg);
+	background-color: $black-color;
+}
+
+.shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: -1;
 }
 
 .section-title {
@@ -95,24 +115,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-// addons
-.square {
-	position: absolute;
-	font-size: 15rem;
-	color: hsla(0, 0%, 100%, 0.1);
-
-	&-one {
-		top: 280px;
-		left: 80px;
-		animation: square-rotate 50s linear infinite;
-	}
-
-	&-two {
-		bottom: 100px;
-		right: 120px;
-		animation: square-rotate-left 50s linear infinite;
-	}
 }
 
 @media (min-width: 576px) {

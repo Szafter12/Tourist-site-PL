@@ -136,17 +136,6 @@ body {
 	background-position: bottom;
 	z-index: 1;
 
-	&::before {
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.5);
-		z-index: -1;
-	}
-
 	&__logo {
 		position: absolute;
 		top: 0;
@@ -197,6 +186,40 @@ body {
 
 	&__socials {
 		display: none;
+	}
+}
+
+.gallery-header {
+	position: relative;
+	height: 60vh;
+	background-image: url('../img/gallery-header.jpg');
+	background-position: center;
+	background-size: cover;
+	z-index: 1;
+
+	&__title {
+		font-size: clamp(2.4rem,5vw,8rem);
+	}
+}
+
+// sections
+
+.gallery {
+	.section-title {
+		margin: 2em 0;
+	}
+
+	&__container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 2em;
+		
+		img {
+			width: 30%;
+			object-fit: cover;
+		}
 	}
 }
 
@@ -336,7 +359,7 @@ body {
 		flex-direction: column;
 		align-items: center;
 		gap: 2em;
-		margin-bottom: 10em;
+		margin-bottom: 5em;
 
 		&--reverse {
 			margin-bottom: 0;
@@ -351,7 +374,7 @@ body {
 
 	&__info {
 		width: 80%;
-		font-size: clamp(1.8rem, 5vw, 2rem);
+		font-size: clamp(1.4rem, 5vw, 2rem);
 	}
 }
 
@@ -365,7 +388,9 @@ body {
 		gap: 4em;
 	}
 
-	.contact__container {
+	&__container {
+		display: flex;
+		justify-content: flex-end;
 		position: relative;
 		width: 80%;
 	}
@@ -396,6 +421,85 @@ body {
 
 	&__textarea {
 		min-height: 200px;
+	}
+
+	&__btn {
+		padding: 1em 2em;
+		background-color: $main-color;
+		border-radius: 12px;
+		font-size: clamp(1.4rem,3vw,1.6rem);
+		color: $pure-white;
+		font-weight: bold;
+	}
+}
+
+// footer
+
+.footer {
+	position: relative;
+	background-color: $gray-color;
+	overflow: hidden;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		gap: 3em;
+	}
+
+	&__name {
+		margin-bottom: 2em;
+		font-size: clamp(2rem,3vw,3.6rem);
+	}
+
+	&__address {
+		&-title {
+			font-size: clamp(2.8rem,3vw,3rem);
+			margin-bottom: 0.5em;
+		}
+
+		&-text {
+			margin-bottom: 0.5em;
+		}
+	}
+
+	&__left {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 2em;
+	}
+
+	&__right {
+		align-self: center;
+		text-align: center;
+		.brand-icon {
+			color: $pure-white;
+			font-size: clamp(2rem,3vw,2.4rem);
+			padding: 0.5em;
+			transition: color 0.3s;
+
+			&:hover {
+				color: $main-color;
+			}
+		}
+	}
+
+	&__bottom {
+		text-align: center;
+	}
+
+	.line {
+		margin: 2em 0;
+		width: 100%;
+		height: 2px;
+		border-radius: 25px;
+		background-color: rgba(255,255,255,0.5);
 	}
 }
 
@@ -501,6 +605,21 @@ body {
 				min-height: 600px;
 			}
 		}
+	}
+
+	.contact {
+
+		&__btn {
+			padding: 1.5em 3em;
+		}
+	}
+
+	.footer {
+		&__container, &__info {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	
 	}
 }
 

@@ -143,6 +143,26 @@ table {
   padding: 3em 1em;
 }
 
+.box {
+  position: absolute;
+  top: 0;
+  right: -20%;
+  width: 60%;
+  height: 50px;
+  transform: skew(45deg);
+  background-color: hsl(0, 0%, 13%);
+}
+
+.shadow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
 .section-title {
   margin-bottom: 1em;
   text-align: center;
@@ -171,22 +191,6 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.square {
-  position: absolute;
-  font-size: 15rem;
-  color: hsla(0, 0%, 100%, 0.1);
-}
-.square-one {
-  top: 280px;
-  left: 80px;
-  animation: square-rotate 50s linear infinite;
-}
-.square-two {
-  bottom: 100px;
-  right: 120px;
-  animation: square-rotate-left 50s linear infinite;
 }
 
 @media (min-width: 576px) {
@@ -330,16 +334,6 @@ body {
   background-position: bottom;
   z-index: 1;
 }
-.header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: -1;
-}
 .header__logo {
   position: absolute;
   top: 0;
@@ -386,6 +380,34 @@ body {
 }
 .header__socials {
   display: none;
+}
+
+.gallery-header {
+  position: relative;
+  height: 60vh;
+  background-image: url("../img/gallery-header.jpg");
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+}
+.gallery-header__title {
+  font-size: clamp(2.4rem, 5vw, 8rem);
+}
+
+.gallery .section-title {
+  margin: 2em 0;
+}
+.gallery__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+.gallery__container img {
+  width: 30%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .news .offert {
@@ -506,7 +528,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 2em;
-  margin-bottom: 10em;
+  margin-bottom: 5em;
 }
 .about-us__box--reverse {
   margin-bottom: 0;
@@ -519,7 +541,7 @@ body {
 }
 .about-us__info {
   width: 80%;
-  font-size: clamp(1.8rem, 5vw, 2rem);
+  font-size: clamp(1.4rem, 5vw, 2rem);
 }
 
 .contact__form {
@@ -528,7 +550,9 @@ body {
   align-items: center;
   gap: 4em;
 }
-.contact .contact__container {
+.contact__container {
+  display: flex;
+  justify-content: flex-end;
   position: relative;
   width: 80%;
 }
@@ -554,6 +578,70 @@ body {
 }
 .contact__textarea {
   min-height: 200px;
+}
+.contact__btn {
+  padding: 1em 2em;
+  background-color: hsl(44, 54%, 45%);
+  border-radius: 12px;
+  font-size: clamp(1.4rem, 3vw, 1.6rem);
+  color: hsl(0, 0%, 100%);
+  font-weight: bold;
+}
+
+.footer {
+  position: relative;
+  background-color: hsl(0, 4%, 27%);
+  overflow: hidden;
+}
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3em;
+}
+.footer__name {
+  margin-bottom: 2em;
+  font-size: clamp(2rem, 3vw, 3.6rem);
+}
+.footer__address-title {
+  font-size: clamp(2.8rem, 3vw, 3rem);
+  margin-bottom: 0.5em;
+}
+.footer__address-text {
+  margin-bottom: 0.5em;
+}
+.footer__left {
+  display: flex;
+  flex-direction: column;
+}
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.footer__right {
+  align-self: center;
+  text-align: center;
+}
+.footer__right .brand-icon {
+  color: hsl(0, 0%, 100%);
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  padding: 0.5em;
+  transition: color 0.3s;
+}
+.footer__right .brand-icon:hover {
+  color: hsl(44, 54%, 45%);
+}
+.footer__bottom {
+  text-align: center;
+}
+.footer .line {
+  margin: 2em 0;
+  width: 100%;
+  height: 2px;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 @media (min-width: 400px) {
@@ -628,6 +716,13 @@ body {
   }
   .news .offert__card {
     min-height: 600px;
+  }
+  .contact__btn {
+    padding: 1.5em 3em;
+  }
+  .footer__container, .footer__info {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 @media (min-width: 992px) {

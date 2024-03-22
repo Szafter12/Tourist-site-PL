@@ -20,7 +20,7 @@
 </head>
 
 <body>
-    <!-- <div class="loader-container">
+    <div class="loader-container">
         <svg viewBox="0 0 800 300">
             <text x="50%" y="50%" dy="0" text-anchor="middle" class="text-body">
                 Spokojne &
@@ -29,7 +29,7 @@
                 Wakacje
             </text>
         </svg>
-    </div> -->
+    </div>
 
     <nav class="nav">
         <button class="nav__burgerBtn">
@@ -46,7 +46,7 @@
     </nav>
 
     <header class="header">
-
+        <div class="shadow"></div>
         <div class="header__logo flex-center">
             <p class="kalnia-thin">Spokojne &</p>
             <p class="kalnia-bold">Wakacje</p>
@@ -72,7 +72,7 @@
         </div>
     </header>
 
-    <section id="news" class="news section-padding">
+    <section id="news" class="news">
         <div class="wrapper">
             <h2 class="section-title">
                 <span class="title">Aktualne oferty</span>
@@ -278,9 +278,49 @@
                     <textarea class="contact__textarea" name="msg"></textarea>
                     <label class="contact__label" for="msg">Wiadomość</label>
                 </div>
+                <div class="contact__container">
+                    <button type="submit" class="contact__btn">Wyślij</button>
+                </div>
             </form>
         </div>
     </section>
+
+    <footer class="footer section-padding">
+        <div class="box"></div>
+        <div class="wrapper">
+            <div class="footer__container">
+                <div class="footer__left">
+                    <div class="footer__name">
+                        <p class="kalnia-thin">Spokojne &</p>
+                        <p class="kalnia-bold">Wakacje sp. z o.o.</p>
+                    </div>
+                    <div class="footer__info">
+                        <div class="footer__address">
+                            <p class="footer__address-title">Adres:</p>
+                            <p class="footer__address-text">ul. Wczasowa 1</p>
+                            <p class="footer__address-text">00-950 Warszawa</p>
+                        </div>
+                        <div class="footer__address">
+                            <p class="footer__address-title">Kontakt:</p>
+                            <p class="footer__address-text">Nr tel: 566 704 904</p>
+                            <p class="footer__address-text">Adres E-mail: spokojne.wakacje@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__right">
+                    <p class="footer__address-title">Social Media:</p>
+                    <a href="https://www.facebook.com/?locale=pl_PL" target="_blank"><i
+                            class="brand-icon fa-brands fa-square-facebook"></i></a>
+                    <a href="https://www.instagram.com/" target="_blank"><i
+                            class="brand-icon fa-brands fa-instagram"></i></a>
+                    <a href="https://twitter.com/home?lang=pl" target="_blank"><i
+                            class=" brand-icon fa-brands fa-x-twitter"></i></a>
+                </div>
+            </div>
+            <div class="line"></div>
+            <p class="footer__bottom">&copy; Copyright | Spokojne & Wakacje 2024</p>
+        </div>
+    </footer>
 
     <script src="./js/main.js"></script>
 </body>
