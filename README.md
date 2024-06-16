@@ -12,7 +12,9 @@ To view the demo you need to go to the link provided below:
 
 <br><br>
 
+<div align="center">
 <a align="center" href='https://szafter12.github.io/Tourist-site-PL/'>View demo</a>
+</div>
 
 <br><br>
 
