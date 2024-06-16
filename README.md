@@ -12,7 +12,7 @@ To view the demo you need to go to the link provided below:
 
 <br><br>
 
-<a align="center" href='https://git-hub-app-sigma.vercel.app/'>View demo</a>
+<a align="center" href='https://szafter12.github.io/Tourist-site-PL/'>View demo</a>
 
 <br><br>
 
